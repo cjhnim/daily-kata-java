@@ -44,13 +44,13 @@ public class SolutionTest {
     {
         Solution sol = new Solution('D');
         String expected =
-                        "   A\n" +
-                        "  B B\n" +
-                        " C   C\n" +
+                        "   A   \n" +
+                        "  B B  \n" +
+                        " C   C \n" +
                         "D     D\n" +
-                        " C   C\n" +
-                        "  B B\n" +
-                        "   A\n";
+                        " C   C \n" +
+                        "  B B  \n" +
+                        "   A   \n";
 
         Assert.assertEquals(expected, sol.print());
     }

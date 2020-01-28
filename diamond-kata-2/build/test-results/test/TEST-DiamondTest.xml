@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DiamondTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-01-23T00:22:48" hostname="FRANCIS-DESKTOP" time="0.006">
+  <properties/>
+  <testcase name="B_is_three_height_diamond" classname="DiamondTest" time="0.005"/>
+  <testcase name="D_is_five_height_diamond" classname="DiamondTest" time="0.0"/>
+  <testcase name="C_is_five_height_diamond" classname="DiamondTest" time="0.001"/>
+  <testcase name="A_is_A" classname="DiamondTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DiamondKataTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-28T00:26:13" hostname="FRANCIS-DESKTOP" time="0.004">
+  <properties/>
+  <testcase name="C_should_return_the_diamond_of_three_height" classname="DiamondKataTest" time="0.003"/>
+  <testcase name="B_should_return_the_diamond_of_three_height" classname="DiamondKataTest" time="0.001"/>
+  <testcase name="A_should_return_A" classname="DiamondKataTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -20,7 +20,7 @@ public class Solution {
             if (c != mid)
                 bottom = line + bottom;
         }
-        
+
         return top + bottom;
     }
 
