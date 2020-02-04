@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DiamondShould" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-02-03T00:32:14" hostname="FRANCIS-DESKTOP" time="0.014">
+  <properties/>
+  <testcase name="When_input_is_A_should_print_only_A" classname="DiamondShould" time="0.011"/>
+  <testcase name="When_input_is_C_should_have_two_space_of_first_line" classname="DiamondShould" time="0.0"/>
+  <testcase name="have_B_row_when_stop_letter_is_C" classname="DiamondShould" time="0.0"/>
+  <testcase name="have_B_row_when_stop_letter_is_D" classname="DiamondShould" time="0.001"/>
+  <testcase name="have_mirrored_rows_at_the_bottom" classname="DiamondShould" time="0.0"/>
+  <testcase name="When_input_is_B_should_have_one_space_of_first_line" classname="DiamondShould" time="0.0"/>
+  <testcase name="have_C_row_when_stop_letter_is_D" classname="DiamondShould" time="0.0"/>
+  <testcase name="have_rows_from_A_to_B" classname="DiamondShould" time="0.0"/>
+  <testcase name="have_D_in_the_fourth_row" classname="DiamondShould" time="0.0"/>
+  <testcase name="have_B_in_the_second_row" classname="DiamondShould" time="0.0"/>
+  <testcase name="have_C_in_the_third_row" classname="DiamondShould" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
