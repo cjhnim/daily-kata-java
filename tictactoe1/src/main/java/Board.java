@@ -32,10 +32,24 @@ public class Board {
 
     public boolean hasWinningLine() {
 
-        for (int i = 0; i < board.length(); i += 3) {
+        if (hasWinningRow() || hasWinningCol()) return true;
+
+        return false;
+    }
+
+    private boolean hasWinningRow() {
+        for (int i = 0; i < board.length() / 2; i += 3)
             if (winning(i, i + 1, i + 2))
                 return true;
-        }
+
+        return false;
+    }
+
+    private boolean hasWinningCol() {
+        for (int i = 0; i < 3; i++)
+            if (winning(0 + i, 3 + i, 6 + i))
+                return true;
+
         return false;
     }
 
