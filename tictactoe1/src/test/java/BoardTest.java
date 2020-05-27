@@ -22,7 +22,7 @@ public class BoardTest {
     }
 
     @Test
-    public void updateBoardWithUsersMove1() {
+    public void testUpdate() {
         String given =
                         "- - - " +
                         "- - - " +
@@ -38,7 +38,7 @@ public class BoardTest {
     }
 
     @Test
-    public void updateBoardWithUsersMove2() {
+    public void testSymbolAt() {
         Board board = new Board(
                         "- - - " +
                         "- - - " +
