@@ -1,9 +1,15 @@
 
 public class Board {
     private String board;
+    private int boardSize;
+    private int colSize;
+    private int rowSize;
 
     public Board(String board) {
         this.board = board;
+        colSize = 3;
+        rowSize = 3;
+        boardSize = colSize * rowSize;
     }
 
     public Board update(int pos, char player) {
@@ -32,22 +38,28 @@ public class Board {
 
     public boolean hasWinningLine() {
 
-        if (hasWinningRow() || hasWinningCol()) return true;
+        if (hasWinningRow() || hasWinningCol() || hasWinningDiagonal()) return true;
 
         return false;
     }
 
+    private boolean hasWinningDiagonal() {
+
+        return winning(0 * colSize, 1 * colSize + 1, 2 * colSize + 2) ||
+                winning(0 * colSize + 2, 1 * colSize + 1, 2 * colSize + 0);
+    }
+
     private boolean hasWinningRow() {
-        for (int i = 0; i < board.length() / 2; i += 3)
-            if (winning(i, i + 1, i + 2))
+        for (int i = 0; i < rowSize; i++)
+            if (winning(i * colSize, i * colSize + 1, i * colSize + 2))
                 return true;
 
         return false;
     }
 
     private boolean hasWinningCol() {
-        for (int i = 0; i < 3; i++)
-            if (winning(0 + i, 3 + i, 6 + i))
+        for (int i = 0; i < colSize; i++)
+            if (winning(0 * colSize + i, 1 * colSize + i, 2 * colSize + i))
                 return true;
 
         return false;

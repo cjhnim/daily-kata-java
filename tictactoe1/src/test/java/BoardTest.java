@@ -106,4 +106,24 @@ public class BoardTest {
 
         assertThat(board.hasWinningLine(), is(true));
     }
+
+    @Test
+    public void hasWinningDiagonal() {
+        Board board = new Board(
+                        "X - - " +
+                        "- X - " +
+                        "- - X ");
+
+        assertThat(board.hasWinningLine(), is(true));
+    }
+
+    @Test
+    public void hasWinningDiagonal2() {
+        Board board = new Board(
+                        "- - X " +
+                        "- X - " +
+                        "X - - ");
+
+        assertThat(board.hasWinningLine(), is(true));
+    }
 }
