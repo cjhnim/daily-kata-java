@@ -3,6 +3,9 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+// TODO:
+// [ ] 가로 세로 가변으로 조정할 수 있도록 하기
+
 public class BoardTest {
     @Test
     public void makeNewInstance() {

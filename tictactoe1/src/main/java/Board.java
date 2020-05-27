@@ -37,10 +37,7 @@ public class Board {
     }
 
     public boolean hasWinningLine() {
-
-        if (hasWinningRow() || hasWinningCol() || hasWinningDiagonal()) return true;
-
-        return false;
+        return hasWinningRow() || hasWinningCol() || hasWinningDiagonal() ;
     }
 
     private boolean hasWinningDiagonal() {
