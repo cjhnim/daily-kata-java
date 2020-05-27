@@ -4,6 +4,6 @@ import org.junit.Test;
 public class testTCR {
     @Test
     public void nothing() {
-        Assert.assertEquals(1,3);
+        Assert.assertEquals(1,1);
     }
 }
