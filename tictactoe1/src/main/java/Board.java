@@ -17,7 +17,7 @@ public class Board {
     }
 
     private int getIndex(int pos) {
-        return pos -1;
+        return pos - 1;
     }
 
     @Override
@@ -28,5 +28,18 @@ public class Board {
     @Override
     public String toString() {
         return board;
+    }
+
+    public boolean hasWinningLine() {
+
+        for (int i = 0; i < board.length(); i += 3) {
+            if (winning(i, i + 1, i + 2))
+                return true;
+        }
+        return false;
+    }
+
+    private boolean winning(int pos1, int pos2, int pos3) {
+        return board.charAt(2 * pos1) != '-' && board.charAt(2 * pos2) != '-' && board.charAt(2 * pos3) != '-';
     }
 }

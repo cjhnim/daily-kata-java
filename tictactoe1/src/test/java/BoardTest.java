@@ -46,4 +46,37 @@ public class BoardTest {
         Board updateBoard = board.update(1, 'X');
         assertThat(updateBoard.symbolAt(1), is('X'));
     }
+
+    @Test
+    public void hasWinningRow() {
+        Board board = new Board(
+                        "X X X " +
+                        "- - - " +
+                        "- - - ");
+
+        boolean hasWinningLine = board.hasWinningLine();
+        assertThat(hasWinningLine, is(true));
+    }
+
+    @Test
+    public void hasWinningRow2() {
+        Board board = new Board(
+                        "- - - " +
+                        "X X X " +
+                        "- - - ");
+
+        boolean hasWinningLine = board.hasWinningLine();
+        assertThat(hasWinningLine, is(true));
+    }
+
+    @Test
+    public void hasWinningRow3() {
+        Board board = new Board(
+                        "- - - " +
+                        "- - - " +
+                        "X X X ");
+
+        boolean hasWinningLine = board.hasWinningLine();
+        assertThat(hasWinningLine, is(true));
+    }
 }
