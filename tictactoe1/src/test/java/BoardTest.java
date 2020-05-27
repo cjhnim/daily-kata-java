@@ -54,8 +54,7 @@ public class BoardTest {
                         "- - - " +
                         "- - - ");
 
-        boolean hasWinningLine = board.hasWinningLine();
-        assertThat(hasWinningLine, is(true));
+        assertThat(board.hasWinningLine(), is(true));
     }
 
     @Test
@@ -65,8 +64,7 @@ public class BoardTest {
                         "X X X " +
                         "- - - ");
 
-        boolean hasWinningLine = board.hasWinningLine();
-        assertThat(hasWinningLine, is(true));
+        assertThat(board.hasWinningLine(), is(true));
     }
 
     @Test
@@ -76,7 +74,6 @@ public class BoardTest {
                         "- - - " +
                         "X X X ");
 
-        boolean hasWinningLine = board.hasWinningLine();
-        assertThat(hasWinningLine, is(true));
+        assertThat(board.hasWinningLine(), is(true));
     }
 }
