@@ -23,7 +23,7 @@ public class Board {
     }
 
     private int getIndex(int pos) {
-        return pos - 1;
+        return pos*2;
     }
 
     @Override

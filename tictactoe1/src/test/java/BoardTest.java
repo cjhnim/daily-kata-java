@@ -31,7 +31,7 @@ public class BoardTest {
                         "- - - " +
                         "- - - " ;
         String expected =
-                        "X - - " +
+                        "- X - " +
                         "- - - " +
                         "- - - " ;
 
