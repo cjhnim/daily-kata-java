@@ -65,4 +65,8 @@ public class Board {
     private boolean winning(int pos1, int pos2, int pos3) {
         return board.charAt(2 * pos1) != '-' && board.charAt(2 * pos2) != '-' && board.charAt(2 * pos3) != '-';
     }
+
+    public PlayerSymbol getWinningSymbol() {
+        return null;
+    }
 }

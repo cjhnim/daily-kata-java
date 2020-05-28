@@ -129,4 +129,15 @@ public class BoardTest {
 
         assertThat(board.hasWinningLine(), is(true));
     }
+
+//    @Test
+//    public void hasCorrectWinningSymbol() {
+//        Board board = new Board(
+//                "X - - " +
+//                "X - - " +
+//                "X - - ");
+//
+//        PlayerSymbol winningSymbol = board.getWinningSymbol();
+//        assertThat(winningSymbol, is(PlayerSymbol.X));
+//    }
 }
