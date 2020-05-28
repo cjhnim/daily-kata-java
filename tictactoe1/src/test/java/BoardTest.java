@@ -111,6 +111,16 @@ public class BoardTest {
     }
 
     @Test
+    public void OhasWinningCol() {
+        Board board = new Board(
+                        "- - O " +
+                        "- - O " +
+                        "- - O ");
+
+        assertThat(board.hasWinningLine(), is(true));
+    }
+
+    @Test
     public void hasWinningDiagonal() {
         Board board = new Board(
                         "X - - " +

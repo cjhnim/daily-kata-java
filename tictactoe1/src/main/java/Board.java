@@ -37,7 +37,12 @@ public class Board {
     }
 
     public boolean hasWinningLine() {
-        return hasWinningRow(PlayerSymbol.X) || hasWinningCol(PlayerSymbol.X) || hasWinningDiagonal(PlayerSymbol.X) ;
+        return hasWinningLine(PlayerSymbol.X) ||
+                hasWinningLine(PlayerSymbol.O) ;
+    }
+
+    private boolean hasWinningLine(PlayerSymbol player) {
+        return hasWinningRow(player) || hasWinningCol(player) || hasWinningDiagonal(player);
     }
 
     private boolean hasWinningDiagonal(PlayerSymbol player) {
