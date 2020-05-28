@@ -37,33 +37,35 @@ public class Board {
     }
 
     public boolean hasWinningLine() {
-        return hasWinningRow() || hasWinningCol() || hasWinningDiagonal() ;
+        return hasWinningRow(PlayerSymbol.X) || hasWinningCol(PlayerSymbol.X) || hasWinningDiagonal(PlayerSymbol.X) ;
     }
 
-    private boolean hasWinningDiagonal() {
+    private boolean hasWinningDiagonal(PlayerSymbol player) {
 
-        return winning(0 * colSize, 1 * colSize + 1, 2 * colSize + 2) ||
-                winning(0 * colSize + 2, 1 * colSize + 1, 2 * colSize + 0);
+        return winning(player, 0 * colSize, 1 * colSize + 1, 2 * colSize + 2) ||
+                winning(player, 0 * colSize + 2, 1 * colSize + 1, 2 * colSize + 0);
     }
 
-    private boolean hasWinningRow() {
+    private boolean hasWinningRow(PlayerSymbol player) {
         for (int i = 0; i < rowSize; i++)
-            if (winning(i * colSize, i * colSize + 1, i * colSize + 2))
+            if (winning(player, i * colSize, i * colSize + 1, i * colSize + 2))
                 return true;
 
         return false;
     }
 
-    private boolean hasWinningCol() {
+    private boolean hasWinningCol(PlayerSymbol player) {
         for (int i = 0; i < colSize; i++)
-            if (winning(0 * colSize + i, 1 * colSize + i, 2 * colSize + i))
+            if (winning(player, 0 * colSize + i, 1 * colSize + i, 2 * colSize + i))
                 return true;
 
         return false;
     }
 
-    private boolean winning(int pos1, int pos2, int pos3) {
-        return board.charAt(2 * pos1) != '-' && board.charAt(2 * pos2) != '-' && board.charAt(2 * pos3) != '-';
+    private boolean winning(PlayerSymbol player, int pos1, int pos2, int pos3) {
+        return  player.equals(board.charAt(2 * pos1)) &&
+                player.equals(board.charAt(2 * pos2)) &&
+                player.equals(board.charAt(2 * pos3));
     }
 
     public PlayerSymbol getWinningSymbol() {

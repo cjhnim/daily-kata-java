@@ -1,19 +1,25 @@
 public class PlayerSymbol {
-    public static final PlayerSymbol X = new PlayerSymbol("X");
-    public static final PlayerSymbol O = new PlayerSymbol("O");
-    private String symbol;
+    public static final PlayerSymbol X = new PlayerSymbol('X');
+    public static final PlayerSymbol O = new PlayerSymbol('O');
+    private Character symbol;
 
-    public PlayerSymbol(String symbol) {
+    public PlayerSymbol(char symbol) {
 
         this.symbol = symbol;
     }
 
     @Override
     public boolean equals(Object obj) {
-        return symbol.compareTo(((PlayerSymbol)obj).getSymbol()) == 0;
+        if(obj instanceof Character)
+            return symbol == ((Character) obj).charValue();
+
+        if(obj instanceof PlayerSymbol)
+            return symbol == ((PlayerSymbol)obj).getSymbol();
+
+        return false;
     }
 
-    public String getSymbol() {
+    public Character getSymbol() {
         return symbol;
     }
 }
