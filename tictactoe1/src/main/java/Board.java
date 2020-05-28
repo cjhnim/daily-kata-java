@@ -74,6 +74,11 @@ public class Board {
     }
 
     public PlayerSymbol getWinningSymbol() {
+        if(hasWinningLine(PlayerSymbol.X))
+            return PlayerSymbol.X;
+        else if(hasWinningLine(PlayerSymbol.O))
+            return PlayerSymbol.O;
+
         return null;
     }
 }
